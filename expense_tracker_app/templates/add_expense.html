@@ -1,0 +1,21 @@
+<!-- expense_tracker_app/templates/add_expense.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Add Expense</h1>
+        <form method="post" action="{% url 'add_expense' %}" class="needs-validation" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <a href="{% url 'display_menu' %}" class="btn btn-secondary mt-3">Back to Menu</a>
+    </div>
+</body>
+</html>

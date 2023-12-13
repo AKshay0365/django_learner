@@ -1,0 +1,20 @@
+<!-- expense_tracker_app/templates/menu.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Expense Tracker</h1>
+        <div class="list-group">
+            <a href="{% url 'add_expense' %}" class="list-group-item list-group-item-action">Add Expense</a>
+            <a href="{% url 'view_expenses' %}" class="list-group-item list-group-item-action">View Expenses</a>
+            <a href="{% url 'calculate_total_expenses' %}" class="list-group-item list-group-item-action">Calculate Total Expenses</a>
+        </div>
+    </div>
+</body>
+</html>
