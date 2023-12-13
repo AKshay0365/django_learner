@@ -7,4 +7,4 @@ RUN apt-get install python3 python3-pip -y
 RUN pip3 install django
 RUN cd /app/expense_tracker_project
 EXPOSE 8000
-CMD ["python3","manage.py","runserver"]
+CMD ["python3","manage.py","runserver","0.0.0.0:8000"]
